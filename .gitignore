@@ -1,0 +1,11 @@
+# Logs
+Logs
+*.log
+npm-debug.log*
+
+
+# misc
+.DS_Store
+.Apple_Double
+
+node_modules/

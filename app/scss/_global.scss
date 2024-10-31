@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  min-width: 320px;
+  @include f400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $text;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: $text;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+.container {
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.title {
+  font-size: 40px;
+  line-height: 45px;
+  @include f600;
+}

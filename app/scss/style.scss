@@ -22,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all .6s;
+    transition: all 0.6s;
   }
   &__top-inner.sticky {
     height: 45px;
@@ -171,7 +171,7 @@
   opacity: 0;
   visibility: hidden;
   &::before {
-    content: "\f00d";
+    content: '\f00d';
     font-family: 'icomoon';
     font-size: 16px;
   }
@@ -180,3 +180,80 @@
     visibility: visible;
   }
 }
+// end header
+
+// start categories
+.categories {
+  padding-top: 100px;
+  position: relative;
+  &__inner {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    align-items: center;
+    overflow: hidden;
+    &--left ul,
+    &--right ul {
+      display: flex;
+    }
+
+    &--left ul li,
+    &--right ul li {
+      padding: 0 14px;
+      height: 80px;
+    }
+    &--left ul li a,
+    &--right ul li a {
+      transform: matrix(1, 0, 0, 1, 25) !important;
+      transition: all 0.4s;
+    }
+    &--left ul li a:hover,
+    &--right ul li a:hover {
+      @include f600;
+    }
+    & ul li a {
+      position: relative;
+    }
+    &-submenu.categories__submenu {
+      background-color: $peach;
+      position: absolute;
+      left: 0;
+      top: 180px;
+      width: 100%;
+      overflow: hidden;
+      height: 0;
+      transition: all 0.5s;
+      z-index: 1;
+    }
+    &-submenu .categories__submenu-items {
+      display: flex;
+      align-items: center;
+      margin-left: 20.6%;
+    }
+    &-submenu .categories__submenu-items .categories__submenu-item {
+      position: relative;
+      padding-right: 60px;
+    }
+    &-submenu .categories__submenu-items .categories__submenu-item::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      border: 2px solid $black;
+      background-color: $black;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &-submenu .categories__submenu-items .categories__submenu-item:last-child::before {
+    border: none;
+  }
+  &-submenu .categories__submenu-item:hover {
+    @include f600;
+  }
+}
+.categories__inner .categories__menu-list li:hover .categories__inner-submenu.categories__submenu {
+  height: 120px;
+}
+// end  categories

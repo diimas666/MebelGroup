@@ -257,3 +257,115 @@
   height: 120px;
 }
 // end  categories
+// start slider
+.slider {
+  &__item {
+    max-width: 1760px;
+    width: 100%;
+    position: relative;
+
+    &-img {
+      min-height: 787px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: block;
+    }
+
+    &-info {
+      width: 480px;
+      position: absolute;
+      top: 200px;
+      left: 150px;
+    }
+    
+    &-dots {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid hsl(0, 0%, 100%, 0.3);
+      padding-left: 12.5vw;  
+    }
+
+    &-dots--left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 160px;
+      width: 100%;
+      height: 110px;
+      border-right: 1px solid hsl(0, 0%, 100%, 0.3);
+
+    }
+
+    &-dots__total {
+      position: absolute;
+      bottom: 30px;
+      left: 71px;
+      color: $white;
+    }
+  }
+
+  &__suptitle {
+    color: $white;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 27px;
+  }
+  &__title {
+    color: $white;
+    font-size: 60px;
+    line-height: 64px;
+    margin-bottom: 32px;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 11.5px 23px;
+    @include f600;
+    font-size: 14px;
+    line-height: 1.215;
+    color: $hovertext;
+    background-color: $white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .1s;
+  }
+  &__btn:hover {
+    background-color: transparent;
+    color: $white;
+    box-shadow: none;
+  }
+}
+.slick-dots {
+  position: absolute;
+  bottom: 68px;
+  left: 65px;
+  & li {
+    display: none;
+  }
+  & .slick-active {
+    display: block;
+    position: relative;
+  }
+  & .slick-active::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $white;
+  }
+  & li button {
+    border: none;
+    background-color: transparent;
+    color: $white;
+    font-size: 16px;
+  }
+}
+// end slider

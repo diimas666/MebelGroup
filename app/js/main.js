@@ -17,4 +17,15 @@ $(function () {
     const header = document.querySelector('.header__top-inner');
     header.classList.toggle('sticky', window.scrollY > 0)
   })
+
+  // slider 
+  $('.slider__inner').slick({
+    dots: true,
+    arrows: false,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    // autoplay: true,
+    infinity: true,
+
+  })
 });
